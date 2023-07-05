@@ -16,10 +16,13 @@ const deleteProduct = async (_, { id }) => {
   return id
 }
 
+const getProductsByCategory = ({dataValues}) => service.getByCategory(dataValues.id)
+
 module.exports = {
   getProduct,
   getProducts,
   addProduct,
   updateProduct,
-  deleteProduct
+  deleteProduct,
+  getProductsByCategory
 }
